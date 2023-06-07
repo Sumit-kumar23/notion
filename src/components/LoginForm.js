@@ -22,16 +22,22 @@ const LoginForm = ({setIsLoggedIn}) => {
         navigate("/dashboard");
     }
   return (
-    <form onSubmit={submitHandler}>
-        <label>
-        <p>E-Mail Address<sup>*</sup>
+    <form onSubmit={submitHandler}
+    className='flex flex-col w-full gap-y-4 mt-6'
+    >
+        <label className='w-full'>
+        <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>E-Mail Address<sup className='text-pink-200'>*</sup>
         </p>
-        <input type="email" required value={formData.email} placeholder='E-Mail id ' onChange={changeHandler} name="email"/>
+        <input type="email" required value={formData.email} placeholder='E-Mail id ' onChange={changeHandler} name="email"
+            className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
+        />
         </label>
-        <label>
-        <p>Password<sup>*</sup>
+        <label className='w-full'>
+        <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>Password<sup className='text-pink-200'>*</sup>
         </p>
-        <input type={showPassword ? ("text") : ("password")} value={formData.password} placeholder="show password" onChange={changeHandler} name="password"/>
+        <input type={showPassword ? ("text") : ("password")} value={formData.password} placeholder="Show password" onChange={changeHandler} name="password"
+             className='bg-richblack-800 rounded-[0.5rem] text-richblack-5 w-full p-[12px]'
+        />
         <Link to="#"><p>Forgot Password</p></Link>
         </label>
 

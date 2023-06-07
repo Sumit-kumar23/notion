@@ -19,17 +19,17 @@ const Signup = () => {
 }
   return (
     <div>
-        <div>
+        <div  className='flex bg-richblack-800 p-1 gap-x-1 my-6 rounded-full max-w-max'>
             <button>Student</button>
             <button>Instructor</button>
 
         </div>
 
-        <form>
+           <form>
         {/* first-last name */}
-          <div>
-              <label>
-                  <p>First Name <sup>*</sup></p>
+          <div lassName='flex flex-col md:flex-row gap-4 mt-[20px]'> 
+              <label className='w-full'>
+                  <p className='text-[0.875rem] text-richblack-5 mb-1 leading-[1.375rem]'>First Name <sup className='text-pink-200'>*</sup></p>
                   <input type="text" required name="firstName" onChange={changeHandler} placeholder='Enter Your first name' value={formData.firstName}/>
                 </label>
                 <label>
@@ -55,7 +55,7 @@ const Signup = () => {
           </div>
           <button>Create Account</button>
          
-        </form>
+        </form> 
     </div>
   )
 }
